@@ -7,7 +7,10 @@
   	</settings>
   	
   	<typeAliases>
-
+	  	<typeAlias alias="PbSelectDto"  type="com.oracle.PraticeProject.domain.PbSelectDto">
+	  	<typeAlias alias="ProblemsDto"  type="com.oracle.PraticeProject.domain.ProblemsDto">
+	  	<typeAlias alias="MemberDto" 	type="com.oracle.PraticeProject.domain.MemberDto">
+			
   	</typeAliases>
   	
 </configuration>

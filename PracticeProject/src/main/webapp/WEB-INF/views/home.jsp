@@ -4,9 +4,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>home</title>
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+
+</script>
 </head>
 <body>
+<form>
+	<c:foreach var="PL" items="${problemsList }" varStatus="status">
+		<tr>
+			<td><c:out value="${status.count }"/>.</td>
+			<td><c:out value="${PL.pbTitle }"/></td>
+			<td><c:out value="${PL.pbScore }"/></td>
+			<td><c:out value="${PL.pbCorrectYn }"/></td>
+		</tr>
+	</c:foreach>
+</form>
 
 </body>
 </html>
