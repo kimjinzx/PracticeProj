@@ -14,7 +14,7 @@
 </script>
 </head>
 <body>
-<form>
+<form action="home">
 	<c:foreach var="PL" items="${problemsList }" varStatus="status">
 		<tr>
 			<td><c:out value="${status.count }"/>.</td>
@@ -24,6 +24,7 @@
 		</tr>
 	</c:foreach>
 </form>
+<h1>hello</h1>
 
 </body>
 </html>
