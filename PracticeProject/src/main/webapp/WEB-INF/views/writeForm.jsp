@@ -7,7 +7,7 @@
 <title>글작성</title>
 <script type="text/javascript">
 
-
+  
 </script>
 </head>
 <body>
