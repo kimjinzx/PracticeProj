@@ -7,8 +7,8 @@
   	</settings>
   	
   	<typeAliases>                             
-	  	<typeAlias alias="PbSelectDto"  type="PracticeProject.domain.PbSelectDto"/>
-	  	<typeAlias alias="ProblemsDto"  type="PracticeProject.domain.ProblemsDto"/>
+	  	<typeAlias alias="ArticleDto"  type="PracticeProject.domain.ArticleDto"/>
+	  	<typeAlias alias="DepartmentDto"  type="PracticeProject.domain.DepartmentDto"/>
 	  	<typeAlias alias="MemberDto" 	type="PracticeProject.domain.MemberDto"/>
 			
   	</typeAliases>

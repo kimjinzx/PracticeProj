@@ -3,9 +3,9 @@
 
 <mapper namespace="com.jin.practiceproject.domain.mapper">
 	
-	<select id="test" resultType="ProblemsDto">
+	<select id="test" resultType="ArticleDto">
 	select *
-	from problems
+	from article
 	
 	</select>
 </mapper>

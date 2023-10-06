@@ -3,12 +3,14 @@ package PracticeProject.Controller;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import PracticeProject.domain.ProblemsDto;
-import PracticeProject.service.ProService;
+import PracticeProject.domain.ArticleDto;
+import PracticeProject.domain.DepartmentDto;
+import PracticeProject.domain.MemberDto;
+import PracticeProject.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,17 +19,32 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 public class homeController {
-	private final ProService ser;
+	private final ArticleService as;
+	
+	
+//	@RequestMapping(value="/")
+//	public String index() {
+//		return "redirect:/index";
+//	}
+	
 
-	@GetMapping(value = "/home/")
-	public String problemsAllList (ProblemsDto pd, Model model) {
+	@GetMapping(value = "/board")
+	public String articleAllList (ArticleDto ad, Model model) {
 		
-		List<ProblemsDto> problemsList = ser.findProblemsList();
+		List<ArticleDto> articleList = as.findArticleList();
 		
-		model.addAttribute("problemsList", problemsList);
+		model.addAttribute("articleList", articleList);
 		
-		return "/home";
+		return "board";
 	}
+	
+	
+//	@GetMapping(value = "/board/WriteForm")
+//	public String writeForm (ArticleDto ad, MemberDto md, DepartmentDto dd, Model model) {
+//		
+//		List<>
+//	}
+		
 	
 	
 }

@@ -6,7 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import PracticeProject.domain.ProblemsDto;
+import PracticeProject.domain.ArticleDto;
+import PracticeProject.domain.MemberDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,18 +15,18 @@ import lombok.extern.slf4j.Slf4j;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class ProDaoImpl implements ProDao {
+public class ArticleDaoImpl implements ArticleDao {
 	private final SqlSession session;
 
 	@Override
-	public List<ProblemsDto> pbList() {
-		List<ProblemsDto> pbList = null;
+	public List<ArticleDto> abList() {
+		List<ArticleDto> abList = null;
 		try {
-			pbList = session.selectList("test");
+			abList = session.selectList("test");
 		} catch (Exception e) {
 			log.error("error -> ", e.getMessage() );
 		}
-		return pbList;
+		return abList;
 	}
 
 }
